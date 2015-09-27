@@ -117,7 +117,98 @@ plaque. Overall, it took about 15 minutes per plaque.
 
 # Mounting Hardware
 
-TODO
+When I started this project, I had a rough idea that I wanted to take some
+beams of wood, mount the plaques on/in them together with some LEDs, and
+somehow attach the beams together. However, I'm primarily experienced in
+software and electronics, so this part of the project caused the most angst.
+
+I visited Home Depot to find some wood beams. At least locally, they don't
+have a great selection of *good looking* and non-deformed wood. However, I
+wanted to get the project going, so didn't want to spend time looking
+elsewhere. In the end I found some stakes that were almost 1.5" square
+and 48" long. I think these were intended for building guard railings around
+decks. Even so, I had to search through the stock to find stakes that were
+both straight and reasonably blemish-free. I believe they're
+[this product](http://www.homedepot.com/p/Unbranded-48-in-x-2-in-Redwood-End-Baluster-137939/100085420).
+
+In order to cut the slots, I used a router. After much searching I found a
+router bit that cuts a T-slot, the Infinity Tools 50-002. It's available on
+[Amazon's](http://www.amazon.com/gp/product/B005MPVFFW?psc=1&redirect=true&ref_=oh_aui_detailpage_o03_s00)
+and
+[Infinity Tools'](http://www.infinitytools.com/1_4-Shank-T-Slot-Channel-Hinge-Bit/productinfo/50-002/)
+websites. With help from Hugh Wallace (well, he did most of the work!), I
+used this to cut an inverted-T slot along the length of each beam. The wide
+(bottom) part of the slot is used to hold the LED strips (see the next
+section) and the narrow part almost holds the plaques upright.
+
+I had naively assumed that the acrylic I had obtained was 1/4", whereas it
+turned out to be 1/8". This meant that the plaques didn't find tightly into
+the slot in the wood beams; they rested at an angle and fell out easily. Not
+that this oversight mattered much since I had not actually found any choice
+in available T slot router bits. To solve this, I cut out a number of shims
+approx 1.5" x 0.5" from the same acrylic, and stuffed these into the slot
+behind the plaques. That resulted in a reasonably tight fit, and upright
+plaques.
+
+I considered a number of options for mounting the beams together, mostly
+involving attaching the horizontal beams to a number of vertical beams.
+However, I somehow got the idea to use metal wire; it *seemed* like it
+would be easier than trying to square up a bunch of wood joints.
+
+I elected to thread the wire through vertical holes at the end of the beams,
+about an inch from the end; up a set at the front, into a small loop for
+hanging, and then down another set at the back. This kept everything
+balanced front-to-back without interfering with the T-slot I'd cut down the
+center (front-to-back) of the beam. I'm obviously not particularly good at
+using a drill press, since the holes didn't seem to come out very vertical.
+No doubt I didn't clamp the pieces very well when drilling. Still, this
+didn't seem to affect the result negatively.
+
+I took a very long time trying to do online research of options for
+attaching the wire to the beams, and eventually just gave up in despair and
+went to Home Depot to see what they had. It was hard to tell from web pages
+which products would work well, and all the products that were designed for
+this purpose seemed intended for high-end galleries, and would have turned
+out quite expensive.
+
+I ended up buying 20' of 1/16" metal wire; a little more than I needed, but
+it's good to have spare. The assistant in the store had a really hard time
+cutting it to length for me since the tools at the station were evidently
+knackered. I was rather worried about trimming it to length when I got home.
+Still, I managed to hack it to the right length without *too* much issue,
+although I suspect my cutters are much worse for wear now. I should have
+bought some decent heavy-duty wire cutters too.
+
+The beams are "attached" to the beams by placing wire clamps onto the wire
+where the beams are to rest. The clamps weren't available individually, so I
+had to purchase clamp-and-thimble sets and just not use the thimbles. I
+believe I purchased 
+[this product](http://www.homedepot.com/p/Lehigh-Wire-Rope-Thimble-and-Clamps-7310S-12/100112173),
+although the Home Depot site doesn't have size information on that SKU, so
+perhaps it's just something similar.
+
+To line everything up, so that the beams were regularly spaced, I pre-marked
+the wire with a permanent marker to show where the clamps should attach,
+then threaded the wire through the clamps and beams, then tightened up the
+clamps. I actually managed to get all the beams to rest on all the clamps!
+
+One problem I had was that I was only running one wire through the clamp,
+but either the clamps were a size too large for the wire I was using, or
+they were designed to require multiple passes of wire in order to fit. That
+made it hard to tighten the clamps onto the wire, since the thread didn't go
+far enough up the metal loop to allow the nuts to fully tighten. I solved
+this by purchasing small plastic spacers to push each nut nearer the middle
+of the thread. It proved very difficult purchasing these spaces; my local
+hardware store had the right product, but only half the quantity I needed,
+Home Depot doesn't seem to sell them, and I finally found enough at an Ace
+Hardware a bit further away. I hate searching hardware stores for things
+like this! The product was something like
+[this](http://www.amazon.com/Hillman-Group-58020-Natural-Number-10/dp/B00MND6E1G/ref=sr_1_7?s=hi&ie=UTF8&qid=1443333087&sr=1-7&keywords=nylon+spacer+bushing)
+but probably a different size.
+
+Once everything was threaded together, I hung it from some large eyelets
+screwed into the ceiling beams, using some thick string that FCCH had lying
+about from when I built and hung our home-grown projector screen.
 
 # Lighting Hardware
 
