@@ -138,3 +138,9 @@ plaques, and for polishing off all my finger-prints.
 FCCH member Hugh Wallace for routing the slots in the wooden beams with his
 own router, and for inspiring me towards the Adafruit Huzzah ESP8266 module
 and the Arduino IDE support for it.
+
+# Video
+
+Thanks for reading this far! Here's a video of the display in action:
+
+[![video](installed-video.gif)](https://www.youtube.com/watch?v=92k3K8-Ec-A)
