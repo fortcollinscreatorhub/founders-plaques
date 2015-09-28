@@ -212,7 +212,75 @@ about from when I built and hung our home-grown projector screen.
 
 # Lighting Hardware
 
-TODO
+Naturally I wanted the plaques lit up, and with something more than just
+static white light. The obvious answer was a strip of individually
+addressable RGB LEDs. The strip slides into the T-slot underneath the
+plaques, and lights them from below.
+
+LED strips have a few parameters, such as control protocol and density
+(spacing) on the strip. In my case I chose a strip that uses the WS2812B
+protocol since it's very common and easy to drive, and contains 60 pixels
+per meter, which just happens to result in exactly 8 LEDs fitting within the
+width of each plaque; that's a nice round number!
+
+You can get such strips from many places such as Adafruit (where they're
+referred to as NeoPixel strips), Sparkfun, eBay, etc. In the end I chose
+[this strip](http://www.amazon.com/gp/product/B00JSJV96I?psc=1&redirect=true&ref_=oh_aui_detailpage_o02_s00)
+from Amazon, with free Prime shipping. LED strips can be enclosed in a
+plastic wrapper to weather-seal them. Since this was an inside installation,
+I didn't need that, and this resulted in a less bulky strip that I was more
+confident would fit into the T slot. In the end, I don't think there would
+have been an issue either way; there's plenty of space in the slot.
+
+To power the LEDs, I got a high current
+[power supply](http://www.amazon.com/gp/product/B00MHV7576?psc=1&redirect=true&ref_=oh_aui_detailpage_o02_s00) also from Amazon, but again you can get
+similar devices many places. It supplies 5V 8A which is probably overkill
+for the number of LEDs I used, but not by *that* much if all the LEDs are
+turned on to full-brightness white.
+
+The LED strips may be cut up into units as small as single LEDs, and also
+chained back together to any length. I cut the strips into units of 8 LEDs,
+and used one of those units under each plaque. I joined these units back
+together with wires just over 1" long to provide spacing between the
+plaques. This was quite a bit of work; it probably would have been better to
+just leave the entire strip uncut, and just leave a single LED unused
+between each plaque. Still, I got to keep about 18 more LEDs for other
+projects by dividing up the strip.
+
+Each of the three wooden beams contains its own LED strip. To avoid having
+to chain the data signal back/forth between all the strips, I fed each strip
+from its own pins on the controller board. This meant I needed three sets of
+connectors since the LED strip only came with one set, pre-soldered to the
+two ends of the overall strip. I bought a bunch of extra connectors for this
+purpose from someone on eBay; $5 for five sets including shipping. They're
+apparently known as "JST SM" connectors, and on eBay are often marketed
+specifically for WS281x LED projects.
+
+I used the Adafruit
+[Huzzah ESP8266 board](http://www.adafruit.com/products/2471) as the LED
+controller. This a cheap micro-controller board with a reasonable number of
+IO pins, WiFi connectivity, small size, and can even be programmed using the
+Arduino IDE for simplicity. I like this board better than the Sparkfun
+ESP8266 "Thing" since it's cheaper, smaller, and has better features such as
+integrated reset and GPIO0 (programming) buttons and saner power inputs.
+The physical design also beats all/many of the other basic ESP8266 boards
+since it has mounting holes and all the SoC's IO pins available for use.
+
+To make the wiring harnesses, I installed the LED strips and ESP8266 board,
+cut all the various wiring to approximately the correct length, soldered it
+all together, and covered everything up with heat-shrink, and taped it up
+using masking tape.
+
+To prevent the weight of the wiring harness pulling the LED strips out of
+the wooden beams (or just pulling them a little out of alignment) I used a
+large dollop of hot glue to fix the wiring in place right at the end of the
+wooden beams.
+
+I attached the power supply and extension cord to a few fixtures (wiring
+pipe to the light switch, and fence beside the stairs) using some brightly
+colored cable ties. The color made them obvious, so they form an interesting
+part of the installation rather looking like I was trying to hide them, but
+failing.
 
 # Software
 
@@ -232,6 +300,7 @@ and the Arduino IDE support for it.
 
 # Video
 
-Thanks for reading this far! Here's a video of the display in action:
+Thanks for reading this far! Here's a video of the display in action. Follow
+the link for the full version on Youtube.com.
 
 [![video](installed-video.gif)](https://www.youtube.com/watch?v=92k3K8-Ec-A)
