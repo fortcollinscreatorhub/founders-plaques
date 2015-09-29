@@ -115,6 +115,9 @@ the cut out plaque, resulting in a nice clean design once cut out.
 bed of the LASER cutter/engrave, and repeated the process to make a second
 plaque. Overall, it took about 15 minutes per plaque.
 
+You can find all the plaque image files in the plaques/ directory in this
+repository.
+
 # Mounting Hardware
 
 When I started this project, I had a rough idea that I wanted to take some
@@ -284,7 +287,78 @@ failing.
 
 # Software
 
-TODO
+A number of programming environments exist for the ESP8266, ranging from
+Espressif's own somewhat haphazard C-based SDKs, to NodeMCU's Lua environment,
+through to an Arduino IDE port. While I'm quite into hard-core embedded
+development and would have been quite comfortable programming the ESP8266
+natively, I figured using the Arduino port would be be helpful to anyone else
+enhancing the software in the future, so I used that. For reference, check out
+https://github.com/esp8266/Arduino.
+
+I a past project that involved an Arduino and NeoPixels, I had used the FastLED
+library to control the LEDs. However, that library uses some low-level routines
+that are hardware-specific in order to generate the particular timing that the
+WS2812 LEDs need, and that code unfortunately isn't yet ported to the ESP8266;
+a replacement was needed. I soon found that the Adafruit NeoPixel library *has*
+been ported to the ESP8266, and it works well.
+
+The software can perform a variety of different effects; mostly different
+forms of wipes in different directions. The set of effects will likely be
+expanded over time. For now, the software simply sits in a loop, picking a
+random effect and random target color, implementing it, and looping back for
+more. This provides plenty of eye candy.
+
+A few details are worth mentioning:
+
+- When the software starts up, it turns all LEDs on bright white for one
+second so it's obvious everything is working, and for an LED check. Once this
+is done, it commences the effects.
+
+- Each effect is implemented using a different function. A pointer to each
+effect's function is stored in a table. This makes it easy to pick a random
+effect; simply pick a random number less than the function table size, pull the
+relevant effect's function pointer out of the table, and call it.
+
+- To aid use of function pointers and ensure matching function prototypes, I
+used a function typedef rather than a function pointer typedef. This allows
+the typedef to be used *both* to prototype the function *and* as the type of
+the function pointer table. Bugs with function prototypes are much harder
+to create this way. The first use wouldn't be possible had I made the typedef
+a pointer itself.
+
+- I decided that wrapping the opening brace of each block onto the previous
+line *except* in the case of a function was inconsistent. All braces are
+wrapped in this code!
+
+- The LED brightness is limited to 128 out of 255. This is plenty bright enough
+to see even with the lights on, and looks awesome in the dark. It saves a bit
+of power too! I started out with a brightness limit of 32 which looked good in
+the dark, but not with the lights on. I did try imposing no limit, but the
+all-white test at boot crashed the system repeatedly; no doubt either the power
+supply is too weedy, or more I simply need to add some decoupling to the power
+rails of the LEDs. So far I have got away without any. Real electrical
+engineers: feel free to cringe:-)
+
+You can find the source code in the arduino/ directory in this repository.
+
+# Future Work
+
+One of the main benefits of the ESP8266 board is its WiFi capability. The
+current software stack doesn't make use of this at all. Some ideas for the
+future include:
+
+- Adding a web/... server to allow manual override, or requests for specific
+colors or effects etc.
+
+- Hooking into the electronic lock (via WiFi) so that when a Founder enters the
+door, their own plaque will light up in some special way for some amount of
+time. This will require a bit more hacking to reverse-engineer the binary
+protocol the door lock speaks over RS-485, or replacing it with our some more
+open electronics. 
+
+- Hooking up some form of motion/proximity/light sensor or other trigger, so
+the LEDs don't need to run 24x7, but rather only when someone is actually
+present to see them.
 
 # Credits
 
